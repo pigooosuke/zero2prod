@@ -1,8 +1,9 @@
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
+use serde::Deserialize;
 use std::net::TcpListener;
 
-#[derive(serde:: Deserialize)]
+#[derive(Deserialize)]
 struct FormData {
     email: String,
     name: String,
